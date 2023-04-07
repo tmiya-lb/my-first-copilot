@@ -1,0 +1,9 @@
+services:
+    smtp:
+        build:
+            context: ./postfix
+        ports:
+            - "25:25"
+        volumes:
+            - "./postfix/home:/home"
+            - "./postfix/log:/var/log/postfix"
